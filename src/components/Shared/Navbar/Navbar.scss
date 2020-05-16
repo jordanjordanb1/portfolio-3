@@ -1,0 +1,78 @@
+.navbar {
+  background: transparent;
+  z-index: 999999999999999;
+
+  .navbar-brand {
+    font-family: 'Concert One' !important;
+  }
+
+  .navbar-brand,
+  .nav-item,
+  .nav-link {
+    color: var(--almond) !important;
+    transition: all 200ms ease-out;
+    font-family: 'Ubuntu';
+
+    &:hover {
+      color: var(--tuscany) !important;
+    }
+  }
+
+  .nav-item .active {
+    background: var(--almond);
+    color: var(--eerie-black) !important;
+  }
+
+  .navbar-toggler {
+    margin: 10px 10px 10px 0;
+    font-size: 1em;
+    color: #0e0e0e !important;
+    background: var(--almond);
+    outline: none;
+  }
+
+  .resume-button {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--almond);
+    color: var(--almond);
+    transition: all 300ms;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--almond) !important;
+      color: var(--eerie-black) !important;
+      border-color: var(--almond) !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background: var(--eerie-black);
+  }
+
+  .social-links a {
+    margin: 0px 10px;
+    font-size: 2em;
+  }
+
+  .navbar-collapse {
+    border-top: 1px solid var(--almond);
+    background: #0e0e0e;
+    padding-top: 10px;
+
+    .nav-item .active,
+    .nav-link {
+      background: initial !important;
+      color: var(--almond) !important;
+      margin-bottom: 10px;
+    }
+
+    .active {
+      font-weight: bold;
+    }
+  }
+}

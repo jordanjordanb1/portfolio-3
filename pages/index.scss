@@ -1,0 +1,116 @@
+.home-jumbotron {
+  h1 {
+    color: var(--almond);
+    text-shadow: 1px 1px 1px rgb(100, 100, 100);
+    font-family: 'Acme', sans-serif;
+    font-size: 7em;
+  }
+
+  .item-container {
+    width: 50%;
+
+    .hi-box {
+      display: block;
+      transform: translateY(-1000px);
+      animation: slide-down 0.75s forwards ease-out 300ms;
+
+      h1 {
+        display: block;
+        margin: 0;
+      }
+    }
+
+    .intro-box {
+      display: block;
+
+      h1 {
+        opacity: 0;
+        margin: 0;
+        line-height: 120px;
+
+        &:nth-child(1) {
+          animation: slide-right 0.75s forwards ease-out;
+          animation-delay: 1.05s;
+        }
+
+        &:nth-child(2) {
+          animation: slide-up 0.75s forwards ease-out;
+          animation-delay: 1.8s;
+        }
+      }
+
+      .quick-links {
+        background: none;
+        border: 1px solid var(--almond);
+        width: 150px;
+        opacity: 0;
+        font-weight: 400;
+        outline: none;
+        pointer-events: none;
+        border-radius: 0px;
+        animation: show 0.75s forwards ease-out;
+        animation-delay: 2.55s;
+        color: var(--almond);
+
+        &:hover {
+          background: var(--almond);
+          color: var(--eerie-black);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .home-jumbotron .item-container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .home-jumbotron .item-container {
+    width: 80%;
+
+    h1 {
+      font-size: 6em;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .home-jumbotron .item-container {
+    width: 100%;
+
+    h1 {
+      font-size: 4.5em;
+      text-align: center;
+    }
+
+    .intro-box {
+      text-align: center !important;
+
+      h1 {
+        line-height: 80px;
+      }
+
+      .quick-links {
+        width: 100px;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-jumbotron .item-container {
+    h1 {
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .intro-box h1 {
+      line-height: 60px;
+    }
+  }
+}

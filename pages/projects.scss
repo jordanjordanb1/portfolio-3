@@ -1,0 +1,10 @@
+.no-projects {
+  height: 90vh;
+  color: var(--almond);
+}
+
+@media screen and (max-width: 400px) {
+  .no-projects h1 {
+    font-size: 2em;
+  }
+}
