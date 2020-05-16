@@ -9,10 +9,12 @@ import FormGroup from 'react-bootstrap/FormGroup';
 import Label from 'react-bootstrap/FormLabel';
 import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 export default function ContactForm() {
-  const [formStatus, setFormStatus] = useState(),
-    [formMsg, setFormMsg] = useState('');
+  const [formStatus, setFormStatus] = useState();
+  const [formMsg, setFormMsg] = useState('');
+  const router = useRouter();
 
   const ContactSchema = Yup.object().shape({
     contact: Yup.object().shape({
@@ -47,7 +49,7 @@ export default function ContactForm() {
             setFormStatus(true);
             setFormMsg('Message sent successfully');
             setTimeout(() => {
-              // history.push('/');
+              router.push('/');
             }, 1000);
             return true;
           }
