@@ -21,15 +21,15 @@ class CustomDocument extends Document {
           <link rel="manifest" href="manifest/manifest.json" />
 
           <link
-            rel="stylesheet preconnect"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-            integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-            crossOrigin="anonymous"
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
           />
+
           <link
-            href="https://fonts.googleapis.com/css?family=Acme|Concert+One|Ubuntu&display=swap"
-            rel="stylesheet preconnect"
-            crossOrigin="anonymous"
+            href="https://fonts.googleapis.com/css2?family=Acme&family=Concert+One&family=Ubuntu:wght@400;500&display=swap"
+            rel="stylesheet"
           />
         </Head>
         <body>
