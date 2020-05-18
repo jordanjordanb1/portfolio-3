@@ -1,13 +1,12 @@
-import './_app.scss';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '../src/components/Shared/Navbar/Navbar';
-import Analytics from '../src/utils/analytics/Analytics';
+import './_app.css';
+import Navbar from '@/shared/Navbar/Navbar';
+import Analytics from '@/analytics/Analytics';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       {Analytics.build()}
-      <Navbar />
+      <Navbar elevation={0} />
       <Component {...pageProps} />
     </>
   );
