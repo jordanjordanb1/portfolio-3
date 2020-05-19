@@ -6,7 +6,7 @@
     "dev": "NODE_ENV=development next dev",
     "build": "next build",
     "start": "next start",
-    "storybook": "start-storybook -h storybook.local -p 6006",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
