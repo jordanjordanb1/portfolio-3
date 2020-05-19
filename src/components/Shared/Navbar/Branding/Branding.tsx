@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components/macro';
-import Typography from '@material-ui/core/Typography';
+import { StyledTypography } from './Branding.style';
 
 type Variants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
@@ -12,19 +11,6 @@ type BrandingProps = {
   handleClick?: (e: any) => void;
   analyticsTitle?: string;
 };
-
-const StyledTypography = styled(Typography)`
-  && {
-    font-family: 'Concert One';
-    color: var(--almond);
-    transition: all 200ms ease-out;
-    cursor: pointer;
-
-    &:hover {
-      color: var(--tuscany);
-    }
-  }
-`;
 
 /**
  * @param {string} href
