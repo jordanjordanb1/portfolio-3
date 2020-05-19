@@ -2,10 +2,8 @@ import Analytics from '@/analytics/Analytics';
 import React from 'react';
 import NavItem from './NavItem/NavItem';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Tabs from '@material-ui/core/Tabs';
-import styled from 'styled-components/macro';
 import Branding from './Branding/Branding';
+import { StyledToolbar, StyledTabs } from './Navbar.style';
 
 type Position = 'absolute' | 'fixed' | 'relative' | 'static' | 'sticky';
 
@@ -14,20 +12,6 @@ type NavbarProps = {
   elevation: number;
   analytics?: boolean;
 };
-
-const StyledTabs = styled(Tabs)`
-  && {
-    margin-left: 40px;
-  }
-`;
-
-const StyledToolbar = styled(Toolbar)`
-  && {
-    @media (min-width: 600px) {
-      min-height: fit-content;
-    }
-  }
-`;
 
 const Navbar: React.SFC<NavbarProps> = ({ position = 'fixed', elevation, analytics = true }) => {
   const handleClick = (e: any) => {
