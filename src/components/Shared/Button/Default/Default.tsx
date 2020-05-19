@@ -15,7 +15,7 @@ interface RoundedButtonProps extends ButtonProps {
  * @param {string} children
  * @param {string} [href]
  * @param {boolean} [prefetch = true]
- * @param {'button', 'submit'} [type = 'button']
+ * @param {'button' | 'submit'} [type = 'button']
  * @param {boolean} [rounded = true]
  */
 
