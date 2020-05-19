@@ -3,6 +3,7 @@ import React from 'react';
 import NavItem from './NavItem/NavItem';
 import AppBar from '@material-ui/core/AppBar';
 import Branding from './Branding/Branding';
+import RightSideNav from './RightSideNav/RightSideNav';
 import { StyledToolbar, StyledTabs } from './Navbar.style';
 
 type Position = 'absolute' | 'fixed' | 'relative' | 'static' | 'sticky';
@@ -32,10 +33,11 @@ const Navbar: React.SFC<NavbarProps> = ({ position = 'fixed', elevation, analyti
         <Branding
           variant="h6"
           href="/"
-          text="Jordan Barbosa"
           handleClick={analytics ? handleClick : undefined}
           analyticsTitle="Branding - Navbar"
-        />
+        >
+          Jordan Barbosa
+        </Branding>
 
         <StyledTabs value={false}>
           <NavItem
@@ -66,6 +68,8 @@ const Navbar: React.SFC<NavbarProps> = ({ position = 'fixed', elevation, analyti
             analyticsTitle="Contact - Navbar"
           />
         </StyledTabs>
+
+        <RightSideNav />
       </StyledToolbar>
     </AppBar>
   );

@@ -5,6 +5,7 @@ import styled from 'styled-components/macro';
 export const StyledTabs = styled(Tabs)`
   && {
     margin-left: 40px;
+    flex-grow: 1;
   }
 `;
 
