@@ -1,31 +1,33 @@
 import React from 'react';
 import Link from 'next/link';
 import { StyledTypography } from './Branding.style';
+import { TypographyProps } from '@material-ui/core/Typography/Typography';
 
 type Variants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-type BrandingProps = {
+interface BrandingProps extends TypographyProps {
+  children: string;
   href: string;
-  text: string;
   variant: Variants;
   handleClick?: (e: any) => void;
   analyticsTitle?: string;
-};
+}
 
 /**
+ * @param {string} children
  * @param {string} href
- * @param {text} text
  * @param {Variants} variant
  * @param {(e: any) => void} [handleClick]
  * @param {string} [analyticsTitle] - Title given to ga('send', 'event')
  */
 
 const Branding: React.SFC<BrandingProps> = ({
+  children,
   href,
-  text,
   variant,
   handleClick,
   analyticsTitle,
+  ...props
 }) => (
   <Link href={href}>
     <StyledTypography
@@ -36,10 +38,11 @@ const Branding: React.SFC<BrandingProps> = ({
       onClick={handleClick}
       data-title={analyticsTitle}
       color="inherit"
+      {...props}
     >
-      {text}
+      {children}
     </StyledTypography>
   </Link>
 );
 
-export default Branding;
+export default React.memo(Branding);
