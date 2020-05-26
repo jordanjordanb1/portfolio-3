@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
@@ -18,7 +18,7 @@
     "babel-plugin-macros": "2.8.0",
     "bootstrap": "4.5.0",
     "formik": "2.1.4",
-    "next": "9.4.0",
+    "next": "9.4.2",
     "next-redux-wrapper": "6.0.0",
     "node-sass": "4.14.1",
     "react": "16.13.1",
@@ -26,8 +26,8 @@
     "react-dom": "16.13.1",
     "react-redux": "7.2.0",
     "redux": "4.0.5",
-    "styled-components": "5.1.0",
-    "typescript": "3.9.2",
+    "styled-components": "5.1.1",
+    "typescript": "3.9.3",
     "yup": "0.28.5"
   },
   "devDependencies": {
@@ -55,7 +55,6 @@
     "babel-preset-react-app": "9.1.2",
     "storybook-addon-jsx": "7.2.3",
     "storybook-formik": "2.1.0",
-    "ts-loader": "7.0.4",
     "tslib": "2.0.0",
     "webpack-merge": "4.2.2"
   }
