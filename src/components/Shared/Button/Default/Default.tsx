@@ -4,7 +4,7 @@ import { StyledButton } from './Default.styles';
 import { ButtonProps } from '@material-ui/core/Button/Button';
 
 interface RoundedButtonProps extends ButtonProps {
-  children: string;
+  children: string | JSX.Element;
   href?: string;
   prefetch?: boolean;
   type?: 'button' | 'submit';
@@ -26,10 +26,11 @@ const RoundedButton: React.SFC<RoundedButtonProps> = ({
   type = 'button',
   rounded = true,
   ...props
-}) => {
+}): JSX.Element => {
   const renderButton = () => (
     <StyledButton
-      rounded={rounded}
+      // @ts-ignore
+      rounded={rounded ? 1 : 0}
       // @ts-ignore
       component={href ? 'a' : 'button'}
       type={type}

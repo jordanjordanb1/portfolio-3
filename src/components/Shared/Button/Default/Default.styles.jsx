@@ -5,7 +5,7 @@ export const StyledButton = styled(Button)`
   && {
     color: ${({ variant }) => (variant === 'contained' ? 'var(--eerie-black)' : 'var(--almond)')};
     ${({ variant }) => (variant === 'outlined' ? `border-color: var(--almond)` : `border: none`)};
-    ${({ rounded }: { rounded: boolean }) => (!rounded ? `border-radius: 0px` : ``)};
+    ${({ rounded }) => (!rounded ? `border-radius: 0px` : ``)};
     transition: all 150ms ease-in-out;
 
     :hover {

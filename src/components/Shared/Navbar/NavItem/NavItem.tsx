@@ -11,26 +11,16 @@ interface NavItemProps extends TabProps {
   analyticsTitle?: string;
 }
 
-/**
- * A link in the Navbar
- * @param {string} href
- * @param {string} text
- * @param {(e: any) => void} [handleClick]
- * @param {string} [analyticsTitle]
- */
-
 const NavItem: React.SFC<NavItemProps> = ({
   href,
   text,
   handleClick,
   analyticsTitle,
   ...props
-}) => {
+}): JSX.Element => {
   const router = useRouter();
 
-  const isActive = () => {
-    return router && router.pathname === href;
-  };
+  const isActive = router?.pathname === href;
 
   return (
     <Link href={href}>
@@ -44,7 +34,7 @@ const NavItem: React.SFC<NavItemProps> = ({
         label={text}
         onClick={handleClick}
         data-title={analyticsTitle}
-        className={isActive() ? 'activeLink' : ''}
+        className={isActive ? 'activeLink' : ''}
         {...props}
       />
     </Link>

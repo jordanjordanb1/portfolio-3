@@ -29,5 +29,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/stories/**/*.stories.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/stories/**/*.stories.tsx", "src/components/Shared/Button/Default/Default.styles.jsx"]
 }

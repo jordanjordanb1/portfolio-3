@@ -10,11 +10,13 @@ export const StyledTab = styled(Tab)`
     cursor: pointer;
     font-size: 1em;
     margin: 0 5px;
+    opacity: 1;
 
     &.activeLink {
       background: var(--almond);
       color: var(--eerie-black);
       cursor: default;
+      opacity: 1;
 
       &:hover {
         background: var(--almond);
